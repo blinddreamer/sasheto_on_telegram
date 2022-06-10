@@ -11,7 +11,7 @@ def help(update, context):
     Available commands:
     /start -> Welcome Message
     /help -> This Message
-    /riba -> Information About Fishing
+    /fishing -> Information About.. well Fishing
     """)
 
 def fishing(update, context):
