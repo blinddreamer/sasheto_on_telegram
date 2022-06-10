@@ -1,7 +1,9 @@
 import telegram.ext
+import os
 
-with open('token.txt', 'r') as f:
-    TOKEN = f.read()
+TOKENO = os.environ['TOKEN']
+"""with open('token.txt', 'r') as f:
+    TOKEN = f.read()"""
 
 def start(update, context):
     update.message.reply_text("....и ти ли си НЕумен като Гнома?")
@@ -20,7 +22,7 @@ def fishing(update, context):
 def handle_message(update, context):
     update.message.reply_text()
 
-updater = telegram.ext.Updater(TOKEN, use_context=True)
+updater = telegram.ext.Updater(TOKENO, use_context=True)
 disp = updater.dispatcher
 
 disp.add_handler(telegram.ext.CommandHandler("start", start))
