@@ -2,8 +2,6 @@ import telegram.ext
 import os
 
 TOKENO = os.environ['TOKEN']
-"""with open('token.txt', 'r') as f:
-    TOKEN = f.read()"""
 
 def start(update, context):
     update.message.reply_text("....и ти ли си НЕумен като Гнома?")
