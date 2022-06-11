@@ -1,7 +1,5 @@
 import telegram.ext
 import os
-import requests
-import re
 
 TOKENO = os.environ['TOKEN']
 
