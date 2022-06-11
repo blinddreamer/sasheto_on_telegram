@@ -16,6 +16,7 @@ def help(update, context):
     /fishing -> Information About.. well Fishing
     /dogo -> Dog Pics EVERYWHERE!
     """)
+
 def get_url():
     contents = requests.get('https://random.dog/woof.json').json()
     url = contents['url']
@@ -44,7 +45,6 @@ disp.add_handler(telegram.ext.CommandHandler("start", start))
 disp.add_handler(telegram.ext.CommandHandler("help", help))
 disp.add_handler(telegram.ext.CommandHandler("fishing", fishing))
 disp.add_handler(telegram.ext.CommandHandler("dogo", dogo))
-
 
 updater.start_polling()
 updater.idle()
