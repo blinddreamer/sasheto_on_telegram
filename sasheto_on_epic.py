@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 def sasheto_epik():
-    #Fetches current free games from the store
+    #Current free games from the store
     api = EpicGamesStoreAPI()
     sasheto_free = ""
 
@@ -19,7 +19,7 @@ def sasheto_epik():
             game_promotions = game['promotions']['promotionalOffers']
             upcoming_promotions = game['promotions']['upcomingPromotionalOffers']
             if not game_promotions and upcoming_promotions:
-                # Promotion is not active yet, but will be active soon.
+                #soon
                 promotion_data = upcoming_promotions[0]['promotionalOffers'][0]
                 start_date_iso, end_date_iso = (
                     promotion_data['startDate'][:-1], promotion_data['endDate'][:-1]
