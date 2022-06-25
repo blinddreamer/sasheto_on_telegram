@@ -4,5 +4,5 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
 COPY sasheto_on_telegram.py /python-docker
-COPY sasheto_on_eouc.py /python-docker
+COPY sasheto_on_epic.py /python-docker
 CMD [ "python3", "./sasheto_on_telegram.py"]
